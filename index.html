@@ -1,0 +1,140 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="./images/swipe.png" type="image/x-icon" />
+    <title>Drag Me</title>
+  </head>
+  <body>
+    <button class="openSheetBtn">Show Sheet</button>
+    <div class="dark"></div>
+    <div class="draggableSheet">
+      <div class="dragBtn"></div>
+      <header><h2>The Header</h2></header>
+      <p class="sheetBody">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+        doloribus, sed odit quia repellat tempore? Consequuntur recusandae quae
+        id consectetur veniam repellat minima sunt similique? Laborum tempore
+        ducimus aliquid neque eius accusamus excepturi cupiditate eaque optio
+        nostrum, esse, debitis quae minus voluptatum accusantium adipisci! Omnis
+        earum veritatis, architecto laboriosam, expedita corrupti ex beatae
+        accusantium enim aut sint dolore optio minima pariatur nemo minus quos
+        suscipit provident nostrum esse repellat perspiciatis. Cupiditate eum
+        voluptatum deleniti officiis saepe. Odio iure rerum nihil unde dicta
+        ipsam. Architecto sed, eaque voluptas nesciunt rerum tempora id, nulla
+        blanditiis possimus, fugiat reprehenderit nemo? Temporibus, quisquam
+        error. Mollitia consequatur eum aut totam sint, ea porro qui, animi
+        reprehenderit hic debitis voluptate nam tempore iusto laboriosam
+        eveniet. Cumque sint iure qui dolorem dolor itaque ducimus tempore
+        assumenda. In dolore tenetur quaerat quae, perspiciatis distinctio
+        asperiores facilis, hic velit sit mollitia laudantium possimus!
+        Recusandae, inventore veniam officiis esse magni deserunt nisi quo eius
+        sit, sed ipsa commodi magnam dolore illo corrupti dolorem nobis eos quos
+        mollitia dolorum. Molestias consequatur atque ab aliquam ratione minima
+        molestiae voluptatum est. Asperiores voluptatibus, perspiciatis
+        exercitationem nobis repellendus sed aliquid sit qui obcaecati deserunt
+        totam quasi iste, reprehenderit placeat aliquam laudantium porro
+        accusantium! Tempore quo est amet ipsam fugiat quis debitis magni
+        ducimus facilis sequi, fugit eos pariatur quae neque harum saepe rerum
+        ea repellendus cupiditate deserunt non natus reprehenderit!
+        Exercitationem nobis ex adipisci dicta? Voluptate minima amet fugiat
+        velit, nisi natus accusamus ipsum esse ipsa totam nostrum asperiores
+        maxime consequatur aliquid quae et enim similique in earum dicta ratione
+        sequi error libero eos? Voluptas praesentium earum voluptatum inventore
+        excepturi, sit, numquam laboriosam distinctio iusto ea voluptatibus,
+        quidem atque possimus qui expedita velit impedit ab a. Nesciunt
+        voluptate odio pariatur, velit obcaecati veritatis ducimus quis dolore
+        aut perspiciatis soluta praesentium non excepturi sapiente culpa nostrum
+        quibusdam temporibus voluptatibus consequatur nemo doloribus commodi
+        maxime laudantium placeat? Earum aperiam illum animi explicabo dolorum
+        facere blanditiis, nostrum libero sint corrupti. Deserunt consequuntur,
+        eligendi praesentium incidunt magnam architecto aperiam? Corporis est
+        necessitatibus voluptatem quam repellat, modi laborum quo, deserunt unde
+        vero atque maiores voluptate vel optio nihil molestiae voluptates a
+        suscipit perferendis quasi magni. Impedit, quo neque? Excepturi totam,
+        provident fuga quis fugit eligendi molestias ipsum voluptatum autem nam,
+        voluptatem debitis ut minus similique alias nobis, repellendus
+        blanditiis laborum reprehenderit facere quam doloribus architecto
+        numquam eaque! Corporis, minus a commodi maiores laboriosam optio vel
+        sed ad eius voluptatum quibusdam suscipit nisi eum libero aperiam nulla
+        ipsam iste! Fugit odio quo doloribus ipsum, officiis molestias debitis
+        consequuntur praesentium laudantium sed, dicta dignissimos eum. Minima,
+        labore. Sit, quis illum, dolorem perspiciatis eveniet veritatis
+        quibusdam cum repellat ut distinctio doloribus architecto, inventore
+        dolores quasi qui sapiente provident. Eveniet, deserunt fugiat? Quos
+        dolorum hic totam beatae dicta aperiam aut officia sequi similique nihil
+        labore, suscipit, officiis sunt quod placeat. Id reprehenderit possimus
+        ipsum libero harum excepturi obcaecati magni praesentium. Dolorem porro
+        ullam quia eligendi praesentium! Animi dicta doloribus molestias
+        perferendis, temporibus, natus aperiam ab recusandae omnis provident
+        autem nostrum harum totam nam.
+      </p>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* Style for the draggable item */
+      .draggable {
+        width: 100px;
+        height: 100px;
+        background-color: #3498db;
+        color: #fff;
+        text-align: center;
+        line-height: 100px;
+        cursor: move;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="draggable" id="dragItem">Drag me</div>
+
+    <script>
+      // Variables to store the offset of the dragged item
+      var offsetX, offsetY;
+
+      // Add mousedown event listener to start dragging
+      document
+        .getElementById("dragItem")
+        .addEventListener("mousedown", function (event) {
+          // Store the initial position of the mouse pointer relative to the draggable item
+          offsetX = event.clientX - this.getBoundingClientRect().left;
+          offsetY = event.clientY - this.getBoundingClientRect().top;
+
+          // Add mousemove and mouseup event listeners for dragging and releasing
+          document.addEventListener("mousemove", dragMove);
+          document.addEventListener("mouseup", dragEnd);
+        });
+
+      // Function to handle dragging
+      function dragMove(event) {
+        // Calculate the new position of the draggable item
+        var x = event.clientX - offsetX;
+        var y = event.clientY - offsetY;
+
+        // Check if the item is going out of the left or top boundary
+        x = Math.max(x, 0);
+        y = Math.max(y, 0);
+
+        // Set the new position
+
+        document.getElementById("dragItem").style.top = y + "px";
+      }
+
+      // Function to handle releasing the draggable item
+      function dragEnd() {
+        // Remove the mousemove and mouseup event listeners
+        document.removeEventListener("mousemove", dragMove);
+        document.removeEventListener("mouseup", dragEnd);
+      }
+    </script>
+  </body>
+</html> -->
